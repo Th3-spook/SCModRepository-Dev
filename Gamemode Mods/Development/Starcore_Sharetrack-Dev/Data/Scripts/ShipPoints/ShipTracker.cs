@@ -360,7 +360,7 @@ namespace klime.PointCheck
                     Bpts += bonusWeaponBP;
                 }
             }
-            
+
         }
 
         private void FatHandling(ref bool hasPower, ref bool hasCockpit, ref bool hasThrust, ref bool hasGyro, ref bool hasCTC, ref float movementBpts, ref float powerBpts, ref float offensiveBpts, ref float MiscBpts, ref int bonusBpts, ref int pdBpts, ref string controller, MyCubeGrid subgrid)
@@ -528,7 +528,7 @@ namespace klime.PointCheck
                 }
 
                 if (id == "LargeTurretControlBlock")
-                { 
+                {
                     hasCTC = true;
                 }
             }
@@ -613,7 +613,7 @@ namespace klime.PointCheck
                     break;
                 case "[ONYX] Heliod Plasma Pulser":
                     t_N = "Heliod Plasma Pulser";
-                    mCs = 0.15f;
+                    mCs = 0.50f;
                     break;
                 case "[MA] UNN Heavy Torpedo Launcher":
                     t_N = "UNN Heavy Torpedo Launcher";
