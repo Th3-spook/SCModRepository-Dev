@@ -13,13 +13,13 @@ namespace Scripts
     partial class Parts
     {
         // Don't edit above this line
-        WeaponDefinition AMP_FlakShotgun => new WeaponDefinition
+        WeaponDefinition Flechette_Cannon => new WeaponDefinition
         {
             Assignments = new ModelAssignmentsDef
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "AMP_FlakShotgun", // Block Subtypeid. Your Cubeblocks contain this information
+                        SubtypeId = "Flechette_DoubleBarrel", // Block Subtypeid. Your Cubeblocks contain this information
                         SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
                         MuzzlePartId = "None", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
                         AzimuthPartId = "None", // Your Rotating Subpart, the bit that moves sideways.
@@ -57,7 +57,7 @@ namespace Scripts
             },
             HardPoint = new HardPointDef
             {
-                PartName = "AMP_FlakShotgun", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                PartName = "Flechette Artillery", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
                 DeviateShotAngle = 3f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 5f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Off, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
@@ -173,9 +173,9 @@ namespace Scripts
                 },
             },
             Ammos = new[] {
-                FlakDefault, // Must list all primary, shrapnel, and pattern ammos.
+                Flechette_Round, FlakEwar,// Must list all primary, shrapnel, and pattern ammos.
             },
-            Animations = FlakAnimation,
+            Animations = FlechetteAnimation,
             //Upgrades = UpgradeModules,
         };
         // Don't edit below this line.

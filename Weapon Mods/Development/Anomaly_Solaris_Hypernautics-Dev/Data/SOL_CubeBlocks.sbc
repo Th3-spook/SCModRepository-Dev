@@ -6,13 +6,12 @@
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>AMP_HealGenerator</SubtypeId>
+				<SubtypeId>MagnaPulse_Gen</SubtypeId>
 			</Id>
 			<DisplayName>Goncol MagnaPulse</DisplayName>
 			<Description>
 				Refresh your buddy's shields by manually shooting at it.
-				Grid limit 1
-				Range: 1.75km technically
+				Range: 4.5km technically
 				Heal: 12-20 mill shields (surface area dependent)
 				Reload Charge: 755 megaawatt
 				Relaod Time: 24 seconds
@@ -24,9 +23,15 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\ElectroShield3x3.mwm</Model>
 			<Components>
-				<Component Subtype="AMP_FrameComponent" Count="1"/>
-				<Component Subtype="Computer" Count="1"/>
-				<Component Subtype="AMP_PlateComponent" Count="3"/>
+       <Component Subtype="SteelPlate" Count="12000" />
+       <Component Subtype="Construction" Count="160" />
+       <Component Subtype="MetalGrid" Count="45" />
+       <Component Subtype="SmallTube" Count="50" />
+       <Component Subtype="LargeTube" Count="25" />
+       <Component Subtype="Motor" Count="50" />
+       <Component Subtype="Computer" Count="60" />
+       <Component Subtype="Construction" Count="120" />
+       <Component Subtype="SteelPlate" Count="25000" />
 			</Components>
       <BuildTimeSeconds>60</BuildTimeSeconds>
 			<CriticalComponent Subtype="Computer" Index="0"/>
@@ -37,7 +42,7 @@
 				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="1.0" EndY="3.0"/>
 				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="1.0"/>
 			</MountPoints>
-			<BlockPairName>HealGenerator</BlockPairName>
+			<BlockPairName>MagnaPulse_Gen</BlockPairName>
 			<MirroringZ>Y</MirroringZ>
 		</Definition>
 
@@ -46,7 +51,7 @@
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>AMP_FlakShotgun</SubtypeId>
+				<SubtypeId>Flechette_DoubleBarrel</SubtypeId>
 			</Id>
 			<DisplayName>Flechette Shotgun</DisplayName>
 			<Description>
@@ -63,9 +68,15 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\FlakShotgun.mwm</Model>
 			<Components>
-				<Component Subtype="AMP_FrameComponent" Count="1"/>
-				<Component Subtype="Computer" Count="1"/>
-				<Component Subtype="AMP_PlateComponent" Count="1"/>
+       <Component Subtype="SteelPlate" Count="120" />
+       <Component Subtype="Construction" Count="160" />
+       <Component Subtype="MetalGrid" Count="45" />
+       <Component Subtype="SmallTube" Count="50" />
+       <Component Subtype="LargeTube" Count="25" />
+       <Component Subtype="Motor" Count="50" />
+       <Component Subtype="Computer" Count="60" />
+       <Component Subtype="Construction" Count="120" />
+       <Component Subtype="SteelPlate" Count="250" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 
@@ -76,7 +87,7 @@
 				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="4.00" EndX="2.00" EndY="6.00"/>
 			</MountPoints>
-			<BlockPairName>FlakShotgun</BlockPairName>
+			<BlockPairName>Flechette_DoubleBarrel</BlockPairName>
 		</Definition>
 
 
@@ -100,10 +111,15 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\ImpulseTorchBase.mwm</Model>
 			<Components>
-				<Component Subtype="AMP_FrameComponent" Count="1"/>
-				<Component Subtype="Computer" Count="1"/>
-				<Component Subtype="AMP_FrameComponent" Count="2"/>
-				<Component Subtype="AMP_PlateComponent" Count="1"/>
+       <Component Subtype="SteelPlate" Count="120" />
+       <Component Subtype="Construction" Count="160" />
+       <Component Subtype="MetalGrid" Count="45" />
+       <Component Subtype="SmallTube" Count="50" />
+       <Component Subtype="LargeTube" Count="25" />
+       <Component Subtype="Motor" Count="50" />
+       <Component Subtype="Computer" Count="60" />
+       <Component Subtype="Construction" Count="120" />
+       <Component Subtype="SteelPlate" Count="250" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<BlockPairName>ImpulseTorchBase</BlockPairName>

@@ -13,13 +13,13 @@ namespace Scripts
     partial class Parts
     {
         // Don't edit above this line
-        WeaponDefinition AMP_FieldGenerator => new WeaponDefinition
+        WeaponDefinition Goncol_MagnaPulse => new WeaponDefinition
         {
             Assignments = new ModelAssignmentsDef
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "AMP_HealGenerator", // Block Subtypeid. Your Cubeblocks contain this information
+                        SubtypeId = "MagnaPulse_Gen", // Block Subtypeid. Your Cubeblocks contain this information
                         SpinPartId = "", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
                         MuzzlePartId = "elevation", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
                         AzimuthPartId = "azimuth", // Your Rotating Subpart, the bit that moves sideways.
@@ -38,7 +38,7 @@ namespace Scripts
             Targeting = new TargetingDef
             {
                 Threats = new[] {
-                    Projectiles, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals
+                    Neutrals, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals
                 },
                 SubSystems = new[] {
                     Any, // Subsystem targeting priority: Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any
@@ -56,7 +56,7 @@ namespace Scripts
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Field Generator", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                PartName = "MagnaPulse Generator", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
                 DeviateShotAngle = 0f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 10f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Off, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
@@ -146,7 +146,7 @@ namespace Scripts
                     PreFiringSound = "MaxMemeReload", // Audio for warmup effect.
                     FiringSound = "shieldthing_firesound", // Audio for firing.
                     FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
-                    ReloadSound = "MaxMemeReload", // Sound SubtypeID, for when your Weapon is in a reloading state
+                    ReloadSound = "", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "",
                     HardPointRotationSound = "WepTurretGatlingRotate", // Audio played when turret is moving.
                     BarrelRotationSound = "WepShipGatlingRotation",
@@ -172,9 +172,9 @@ namespace Scripts
                 },
             },
             Ammos = new[] {
-                FieldDefault, // Must list all primary, shrapnel, and pattern ammos.
+                PulseShot, // Must list all primary, shrapnel, and pattern ammos.
             },
-            Animations = FieldAnimation,
+            Animations = PulseFieldAnimation,
             //Upgrades = UpgradeModules,
         };
         // Don't edit below this line.

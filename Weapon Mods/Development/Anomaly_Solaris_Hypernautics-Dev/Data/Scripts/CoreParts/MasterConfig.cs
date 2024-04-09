@@ -6,9 +6,9 @@ namespace Scripts
         internal Parts()
         {
             PartDefinitions(
-		AMP_FieldGenerator,
+		Goncol_MagnaPulse,
 		AMP_ImpulseTorch,
-		AMP_FlakShotgun,
+		Flechette_Cannon,
         Nariman_Smart_Turret,
         S_Chem_Laser,
         S_Armored_Laser,
