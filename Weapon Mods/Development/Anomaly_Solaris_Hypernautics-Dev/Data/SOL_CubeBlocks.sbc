@@ -6,12 +6,13 @@
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>MagnaPulse_Gen</SubtypeId>
+				<SubtypeId>AMP_HealGenerator</SubtypeId>
 			</Id>
 			<DisplayName>Goncol MagnaPulse</DisplayName>
 			<Description>
 				Refresh your buddy's shields by manually shooting at it.
-				Range: 4.5km technically
+				Grid limit 1
+				Range: 1.75km technically
 				Heal: 12-20 mill shields (surface area dependent)
 				Reload Charge: 755 megaawatt
 				Relaod Time: 24 seconds
@@ -23,15 +24,9 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\ElectroShield3x3.mwm</Model>
 			<Components>
-       <Component Subtype="SteelPlate" Count="12000" />
-       <Component Subtype="Construction" Count="160" />
-       <Component Subtype="MetalGrid" Count="45" />
-       <Component Subtype="SmallTube" Count="50" />
-       <Component Subtype="LargeTube" Count="25" />
-       <Component Subtype="Motor" Count="50" />
-       <Component Subtype="Computer" Count="60" />
-       <Component Subtype="Construction" Count="120" />
-       <Component Subtype="SteelPlate" Count="25000" />
+				<Component Subtype="AMP_FrameComponent" Count="1"/>
+				<Component Subtype="Computer" Count="1"/>
+				<Component Subtype="AMP_PlateComponent" Count="3"/>
 			</Components>
       <BuildTimeSeconds>60</BuildTimeSeconds>
 			<CriticalComponent Subtype="Computer" Index="0"/>
@@ -42,7 +37,7 @@
 				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="1.0" EndY="3.0"/>
 				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="1.0"/>
 			</MountPoints>
-			<BlockPairName>MagnaPulse_Gen</BlockPairName>
+			<BlockPairName>HealGenerator</BlockPairName>
 			<MirroringZ>Y</MirroringZ>
 		</Definition>
 
@@ -51,7 +46,7 @@
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>Flechette_DoubleBarrel</SubtypeId>
+				<SubtypeId>AMP_FlakShotgun</SubtypeId>
 			</Id>
 			<DisplayName>Flechette Shotgun</DisplayName>
 			<Description>
@@ -68,15 +63,9 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\FlakShotgun.mwm</Model>
 			<Components>
-       <Component Subtype="SteelPlate" Count="120" />
-       <Component Subtype="Construction" Count="160" />
-       <Component Subtype="MetalGrid" Count="45" />
-       <Component Subtype="SmallTube" Count="50" />
-       <Component Subtype="LargeTube" Count="25" />
-       <Component Subtype="Motor" Count="50" />
-       <Component Subtype="Computer" Count="60" />
-       <Component Subtype="Construction" Count="120" />
-       <Component Subtype="SteelPlate" Count="250" />
+				<Component Subtype="AMP_FrameComponent" Count="1"/>
+				<Component Subtype="Computer" Count="1"/>
+				<Component Subtype="AMP_PlateComponent" Count="1"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 
@@ -87,14 +76,14 @@
 				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="4.00" EndX="2.00" EndY="6.00"/>
 			</MountPoints>
-			<BlockPairName>Flechette_DoubleBarrel</BlockPairName>
+			<BlockPairName>FlakShotgun</BlockPairName>
 		</Definition>
 
 
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>Impulse_Torch</SubtypeId>
+				<SubtypeId>AMP_ImpulseTorch</SubtypeId>
 			</Id>
 			<DisplayName>Impulse Torch</DisplayName>
 			<Description>
@@ -111,15 +100,10 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\ImpulseTorchBase.mwm</Model>
 			<Components>
-       <Component Subtype="SteelPlate" Count="120" />
-       <Component Subtype="Construction" Count="160" />
-       <Component Subtype="MetalGrid" Count="45" />
-       <Component Subtype="SmallTube" Count="50" />
-       <Component Subtype="LargeTube" Count="25" />
-       <Component Subtype="Motor" Count="50" />
-       <Component Subtype="Computer" Count="60" />
-       <Component Subtype="Construction" Count="120" />
-       <Component Subtype="SteelPlate" Count="250" />
+				<Component Subtype="AMP_FrameComponent" Count="1"/>
+				<Component Subtype="Computer" Count="1"/>
+				<Component Subtype="AMP_FrameComponent" Count="2"/>
+				<Component Subtype="AMP_PlateComponent" Count="1"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<BlockPairName>ImpulseTorchBase</BlockPairName>
@@ -660,7 +644,7 @@
 
 		<Definition>
 			<Id>
-				<TypeId>TerminalBlock</TypeId>
+				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>REINFORCED_BLASTPLATE</SubtypeId>
 			</Id>
 			<DisplayName>Reinforced Blastplate</DisplayName>
@@ -702,7 +686,7 @@
 
 		<Definition>
 			<Id>
-				<TypeId>TerminalBlock</TypeId>
+				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>3x3_Blastplate_C</SubtypeId>
 			</Id>
 			<DisplayName>Standard Blastplate C</DisplayName>
@@ -744,7 +728,7 @@
 
 		<Definition>
 			<Id>
-				<TypeId>TerminalBlock</TypeId>
+				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>3x3_Blastplate_B</SubtypeId>
 			</Id>
 			<DisplayName>Standard Blastplate B</DisplayName>
@@ -785,7 +769,7 @@
 
 		<Definition>
 			<Id>
-				<TypeId>TerminalBlock</TypeId>
+				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>3x3_Blastplate_A</SubtypeId>
 			</Id>
 			<DisplayName>Standard Blastplate A</DisplayName>
@@ -821,7 +805,7 @@
 
 				<Definition>
 			<Id>
-				<TypeId>TerminalBlock</TypeId>
+				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>2x4_Blastplate</SubtypeId>
 			</Id>
 			<DisplayName>Elongated Blastplate</DisplayName>

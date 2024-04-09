@@ -30,10 +30,10 @@ namespace Scripts
 { // Don't edit above this line
     partial class Parts
     {
-        private AmmoDef Flechette_Round => new AmmoDef // Your ID, for slotting into the Weapon CS
+        private AmmoDef FlakDefault => new AmmoDef // Your ID, for slotting into the Weapon CS
         {
-            AmmoMagazine = "Shotgun_Magazine", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
-            AmmoRound = "Flechette Ammo", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
+            AmmoMagazine = "FlakShotgun_Magazine", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
+            AmmoRound = "Flak Ammo", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0.1f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
             BaseDamage = 4000f, // Direct damage; one steel plate is worth 100.
@@ -427,11 +427,11 @@ namespace Scripts
 
 
 
-        private AmmoDef ShotgunEwar => new AmmoDef // Your ID, for slotting into the Weapon CS
+        private AmmoDef FlakEwar => new AmmoDef // Your ID, for slotting into the Weapon CS
         {
-            AmmoMagazine = "Energy", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
-            AmmoRound = "EWAR Ammo", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
-            HybridRound = true, // Use both a physical ammo magazine and energy per shot.
+            AmmoMagazine = "FlakShotgun_Magazine", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
+            AmmoRound = "Flak EWAR Ammo", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
+            HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0.1f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
             BaseDamage = 1f, // Direct damage; one steel plate is worth 100.
             Mass = 0f, // In kilograms; how much force the impact will apply to the target.

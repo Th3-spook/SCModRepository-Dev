@@ -13,25 +13,27 @@ namespace Scripts
     partial class Parts
     {
         // Don't edit above this line
-        WeaponDefinition Gimballed_Impulse_Torch => new WeaponDefinition
+        WeaponDefinition AMP_FlakShotgun => new WeaponDefinition
         {
             Assignments = new ModelAssignmentsDef
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "Impulse_Torch", // Block Subtypeid. Your Cubeblocks contain this information
-                        SpinPartId = "", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
-                        MuzzlePartId = "elevation", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
-                        AzimuthPartId = "azimuth", // Your Rotating Subpart, the bit that moves sideways.
-                        ElevationPartId = "elevation",// Your Elevating Subpart, that bit that moves up.
+                        SubtypeId = "AMP_FlakShotgun", // Block Subtypeid. Your Cubeblocks contain this information
+                        SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
+                        MuzzlePartId = "None", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
+                        AzimuthPartId = "None", // Your Rotating Subpart, the bit that moves sideways.
+                        ElevationPartId = "None",// Your Elevating Subpart, that bit that moves up.
                         DurabilityMod = 0.25f, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
                         IconName = "TestIcon.dds" // Overlay for block inventory slots, like reactors, refineries, etc.
                     },
-                },
+
+                 },
                 Muzzles = new[] {
-                    "muzzle_01" // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
+                    "muzzle_01", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
+                    "muzzle_02"
                 },
-                Ejector = "", // Optional; empty from which to eject "shells" if specified.
+                Ejector = "subpart_ejectordoor", // Optional; empty from which to eject "shells" if specified.
                 //Scope = "muzzle_01", // Where line of sight checks are performed from. Must be clear of block collision.
             },
             Targeting = new TargetingDef
@@ -47,7 +49,7 @@ namespace Scripts
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // Minimum radius of threat to engage.
                 MaximumDiameter = 0, // Maximum radius of threat to engage; 0 = unlimited.
-                MaxTargetDistance = 1000, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
+                MaxTargetDistance = 500, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
                 MinTargetDistance = 0, // Minimum distance at which targets will be automatically shot at.
                 TopTargets = 4, // Maximum number of targets to randomize between; 0 = unlimited.
                 TopBlocks = 8, // Maximum number of blocks to randomize between; 0 = unlimited.
@@ -55,8 +57,8 @@ namespace Scripts
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Gimballed Impsule Torch", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
-                DeviateShotAngle = 1f, // Projectile inaccuracy in degrees.
+                PartName = "AMP_FlakShotgun", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                DeviateShotAngle = 3f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 5f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Off, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released - while a target is available.
@@ -72,9 +74,9 @@ namespace Scripts
                 },
                 Ai = new AiDef
                 {
-                    TrackTargets = true, // Whether this weapon tracks its own targets, or (for multiweapons) relies on the weapon with PrimaryTracking enabled for target designation. Turrets Need this set to True.
-                    TurretAttached = true, // Whether this weapon is a turret and should have the UI and API options for such. Turrets Need this set to True.
-                    TurretController = true, // Whether this weapon can physically control the turret's movement. Turrets Need this set to True.
+                    TrackTargets = false, // Whether this weapon tracks its own targets, or (for multiweapons) relies on the weapon with PrimaryTracking enabled for target designation. Turrets Need this set to True.
+                    TurretAttached = false, // Whether this weapon is a turret and should have the UI and API options for such. Turrets Need this set to True.
+                    TurretController = false, // Whether this weapon can physically control the turret's movement. Turrets Need this set to True.
                     PrimaryTracking = true, // For multiweapons: whether this weapon should designate targets for other weapons on the platform without their own tracking.
                     LockOnFocus = false, // If enabled, weapon will only fire at targets that have been HUD selected AND locked onto by pressing Numpad 0.
                     SuppressFire = false, // If enabled, weapon can only be fired manually.
@@ -117,12 +119,12 @@ namespace Scripts
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 300, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
+                    RateOfFire = 60, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
-                    TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
+                    TrajectilesPerBarrel = 15, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
                     ReloadTime = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    MagsToLoad = 3, // Number of physical magazines to consume on reload.
+                    MagsToLoad = 2, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 1, // Heat generated per shot.
                     MaxHeat = 70000, // Max heat before weapon enters cooldown (70% of max heat).
@@ -156,12 +158,12 @@ namespace Scripts
                 {
                     Effect1 = new ParticleDef
                     {
-                        Name = "ImpulseTorchParticle", // SubtypeId of muzzle particle effect.
+                        Name = "", // SubtypeId of muzzle particle effect.
                         Color = Color(red: 0, green: 0, blue: 0, alpha: 1), // Deprecated, set color in particle sbc.
                         Offset = Vector(x: 0, y: 0, z: 0), // Offsets the effect from the muzzle empty.
                         Extras = new ParticleOptionDef
                         {
-                            Loop = true, // Set this to the same as in the particle sbc!
+                            Loop = false, // Set this to the same as in the particle sbc!
                             Restart = false, // Whether to end a looping effect instantly when firing stops.
                             MaxDistance = 10000, // Max distance at which this effect should be visible. NOTE: This will use whichever MaxDistance value is higher across Effect1 and Effect2!
                             MaxDuration = 0, // How many ticks the effect should be ended after, if it's still running.
@@ -171,9 +173,9 @@ namespace Scripts
                 },
             },
             Ammos = new[] {
-                ImpulseTorchDefault, // Must list all primary, shrapnel, and pattern ammos.
+                FlakDefault, // Must list all primary, shrapnel, and pattern ammos.
             },
-            //Animations = Weapon75_Animation,
+            Animations = FlakAnimation,
             //Upgrades = UpgradeModules,
         };
         // Don't edit below this line.

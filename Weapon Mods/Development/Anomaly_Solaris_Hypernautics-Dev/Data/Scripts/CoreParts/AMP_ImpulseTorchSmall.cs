@@ -13,13 +13,13 @@ namespace Scripts
     partial class Parts
     {
         // Don't edit above this line
-        WeaponDefinition Flechette_Cannon => new WeaponDefinition
+        WeaponDefinition AMP_ImpusleTorchSmall => new WeaponDefinition
         {
             Assignments = new ModelAssignmentsDef
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "Flechette_DoubleBarrel", // Block Subtypeid. Your Cubeblocks contain this information
+                        SubtypeId = "AMP_ImpusleTorchSmall", // Block Subtypeid. Your Cubeblocks contain this information
                         SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
                         MuzzlePartId = "None", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
                         AzimuthPartId = "None", // Your Rotating Subpart, the bit that moves sideways.
@@ -30,10 +30,9 @@ namespace Scripts
 
                  },
                 Muzzles = new[] {
-                    "muzzle_01", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
-                    "muzzle_02"
+                    "muzzle_01" // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
                 },
-                Ejector = "subpart_ejectordoor", // Optional; empty from which to eject "shells" if specified.
+                Ejector = "", // Optional; empty from which to eject "shells" if specified.
                 //Scope = "muzzle_01", // Where line of sight checks are performed from. Must be clear of block collision.
             },
             Targeting = new TargetingDef
@@ -57,10 +56,10 @@ namespace Scripts
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Flechette Artillery", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
-                DeviateShotAngle = 3f, // Projectile inaccuracy in degrees.
+                PartName = "Fixed ImpulseTorch", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                DeviateShotAngle = 1f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 5f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
-                AimLeadingPrediction = Off, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
+                AimLeadingPrediction = Accurate, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released - while a target is available.
                 AddToleranceToTracking = false, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
                 CanShootSubmerged = false, // Whether the weapon can be fired underwater when using WaterMod.
@@ -119,12 +118,12 @@ namespace Scripts
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 60, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
+                    RateOfFire = 120, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
-                    TrajectilesPerBarrel = 15, // Number of projectiles per muzzle per fire event.
+                    TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
                     ReloadTime = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    MagsToLoad = 2, // Number of physical magazines to consume on reload.
+                    MagsToLoad = 1, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 1, // Heat generated per shot.
                     MaxHeat = 70000, // Max heat before weapon enters cooldown (70% of max heat).
@@ -158,24 +157,24 @@ namespace Scripts
                 {
                     Effect1 = new ParticleDef
                     {
-                        Name = "", // SubtypeId of muzzle particle effect.
+                        Name = "ImpulseTorchParticle", // SubtypeId of muzzle particle effect.
                         Color = Color(red: 0, green: 0, blue: 0, alpha: 1), // Deprecated, set color in particle sbc.
                         Offset = Vector(x: 0, y: 0, z: 0), // Offsets the effect from the muzzle empty.
                         Extras = new ParticleOptionDef
                         {
-                            Loop = false, // Set this to the same as in the particle sbc!
+                            Loop = true, // Set this to the same as in the particle sbc!
                             Restart = false, // Whether to end a looping effect instantly when firing stops.
                             MaxDistance = 10000, // Max distance at which this effect should be visible. NOTE: This will use whichever MaxDistance value is higher across Effect1 and Effect2!
                             MaxDuration = 0, // How many ticks the effect should be ended after, if it's still running.
-                            Scale = 1f, // Scale of effect.
+                            Scale = 0.25f, // Scale of effect.
                         },
                     },
                 },
             },
             Ammos = new[] {
-                Flechette_Round, ShotgunEwar,// Must list all primary, shrapnel, and pattern ammos.
+                ImpulseTorchDefault, // Must list all primary, shrapnel, and pattern ammos.
             },
-            Animations = FlechetteAnimation,
+            //Animations = Weapon75_Animation,
             //Upgrades = UpgradeModules,
         };
         // Don't edit below this line.
