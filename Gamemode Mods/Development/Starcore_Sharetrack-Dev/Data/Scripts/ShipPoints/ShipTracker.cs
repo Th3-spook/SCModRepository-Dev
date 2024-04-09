@@ -659,7 +659,7 @@ namespace klime.PointCheck
                 case "Standard Blastplate C":
                 case "Elongated Blastplate":
                 case "7x7 Basedplate":
-                    t_N = "Reinforced Blastplate";
+                    t_N = "Blastplate";
                     mCs = 1.00f;
                     break;
                 case "[EXO] Taiidan":
