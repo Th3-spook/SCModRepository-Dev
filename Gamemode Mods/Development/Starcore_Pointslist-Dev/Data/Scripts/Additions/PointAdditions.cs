@@ -557,6 +557,12 @@ Cat_StarcoreUlitity@21;
 				SI_Field_Gen@450;
 				 SELtdLargeNanobotBuildAndRepairSystem@50;
 				  PM_LG_BLASTPLATE_BLASTPLATE@100;
+				  REINFORCED_BLASTPLATE@100;
+				  ACTIVE_BLASTPLATE@100;
+				  3x3_Blastplate_A@25;
+				  3x3_Blastplate_B@25;
+				  3x3_Blastplate_C@25;
+				  2x4_Blastplate@25;
 
 				GravityGenerator@0;
 					SpaceBallSmall@50;
@@ -692,6 +698,7 @@ Cat_UnusedOrOutated_Subtypes@24;
 				Caster_Feeder@10;
 				Caster_FocusLens@50;
 				Caster_Reactor@125;
+
 
 
 			
