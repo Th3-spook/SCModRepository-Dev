@@ -6,7 +6,7 @@
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>AMP_HealGenerator</SubtypeId>
+				<SubtypeId>MagnaPulse_Gen</SubtypeId>
 			</Id>
 			<DisplayName>Goncol MagnaPulse</DisplayName>
 			<Description>
