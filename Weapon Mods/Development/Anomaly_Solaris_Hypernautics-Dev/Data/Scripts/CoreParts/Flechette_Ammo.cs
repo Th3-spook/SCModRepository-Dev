@@ -427,7 +427,7 @@ namespace Scripts
 
 
 
-        private AmmoDef FlakEwar => new AmmoDef // Your ID, for slotting into the Weapon CS
+        private AmmoDef ShotgunEwar => new AmmoDef // Your ID, for slotting into the Weapon CS
         {
             AmmoMagazine = "Energy", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
             AmmoRound = "EWAR Ammo", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.

@@ -173,7 +173,7 @@ namespace Scripts
                 },
             },
             Ammos = new[] {
-                Flechette_Round, FlakEwar,// Must list all primary, shrapnel, and pattern ammos.
+                Flechette_Round, ShotgunEwar,// Must list all primary, shrapnel, and pattern ammos.
             },
             Animations = FlechetteAnimation,
             //Upgrades = UpgradeModules,
