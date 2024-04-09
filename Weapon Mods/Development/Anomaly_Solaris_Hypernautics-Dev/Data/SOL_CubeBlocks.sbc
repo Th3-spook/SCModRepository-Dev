@@ -37,7 +37,7 @@
 				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="1.0" EndY="3.0"/>
 				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="1.0"/>
 			</MountPoints>
-			<BlockPairName>HealGenerator</BlockPairName>
+			<BlockPairName>MagnaPulse_Gen</BlockPairName>
 			<MirroringZ>Y</MirroringZ>
 		</Definition>
 
@@ -46,7 +46,7 @@
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>AMP_FlakShotgun</SubtypeId>
+				<SubtypeId>Flechette_DoubleBarrel</SubtypeId>
 			</Id>
 			<DisplayName>Flechette Shotgun</DisplayName>
 			<Description>
@@ -76,14 +76,14 @@
 				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="4.00" EndX="2.00" EndY="6.00"/>
 			</MountPoints>
-			<BlockPairName>FlakShotgun</BlockPairName>
+			<BlockPairName>Flechette_DoubleBarrel</BlockPairName>
 		</Definition>
 
 
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>AMP_ImpulseTorch</SubtypeId>
+				<SubtypeId>Impulse_Torch</SubtypeId>
 			</Id>
 			<DisplayName>Impulse Torch</DisplayName>
 			<Description>
@@ -106,7 +106,7 @@
 				<Component Subtype="AMP_PlateComponent" Count="1"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
-			<BlockPairName>ImpulseTorchBase</BlockPairName>
+			<BlockPairName>Impulse_Torch</BlockPairName>
 
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00" Default="true"/>

@@ -7,8 +7,8 @@ namespace Scripts
         {
             PartDefinitions(
 		Goncol_MagnaPulse,
-		AMP_ImpulseTorch,
-		AMP_FlakShotgun,
+		Gimballed_Impulse_Torch,
+		Flechette_Cannon,
         Nariman_Smart_Turret,
         S_Chem_Laser,
         S_Armored_Laser,
