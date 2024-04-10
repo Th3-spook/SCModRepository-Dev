@@ -557,6 +557,13 @@ Cat_StarcoreUlitity@21;
 				SI_Field_Gen@450;
 				 SELtdLargeNanobotBuildAndRepairSystem@50;
 				  PM_LG_BLASTPLATE_BLASTPLATE@100;
+				  REINFORCED_BLASTPLATE@100;
+				  ACTIVE_BLASTPLATE@100;
+				  3x3_Blastplate_A@25;
+				  3x3_Blastplate_B@25;
+				  3x3_Blastplate_C@25;
+				  2x4_Blastplate@25;
+				  GIGA_BLASTPLATE@1000;
 
 				GravityGenerator@0;
 					SpaceBallSmall@50;
@@ -638,15 +645,15 @@ Cat_Strikecraft@23;
 
 
 Cat_Fletcher_Subtypes@23;
-				381mmDualR@250;
-                381mmDualNR@250;
+				381mmDualR@400;
+                381mmDualNR@400;
                 380mmMLE1935@400;
                 15cmSKC28R@175;
                 15cmSKC28NR@175;
                 128mmL45@200;
                 128mmSKC34@250;
-                127mmMk12@175;
-                127mmMk24@175;
+                127mmMk12@220;
+                127mmMk24@220;
                 127mmMk32@250;
                 127mmMk56@350;
                 105mmTwin@100;
@@ -688,10 +695,11 @@ Cat_UnusedOrOutated_Subtypes@24;
 
 
 				Caster_Accelerator_0@5;
-				Caster_Accelerator_90@10;
+				Caster_Accelerator_90@20;
 				Caster_Feeder@10;
 				Caster_FocusLens@50;
-				Caster_Reactor@250;
+				Caster_Reactor@125;
+
 
 
 			
