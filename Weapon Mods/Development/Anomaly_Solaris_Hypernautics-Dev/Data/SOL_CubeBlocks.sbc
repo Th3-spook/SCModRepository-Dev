@@ -6,16 +6,15 @@
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>AMP_HealGenerator</SubtypeId>
+				<SubtypeId>MagnaPulse_Gen</SubtypeId>
 			</Id>
 			<DisplayName>Goncol MagnaPulse</DisplayName>
 			<Description>
 				Refresh your buddy's shields by manually shooting at it.
-				Grid limit 1
-				Range: 1.75km technically
-				Heal: 12-20 mill shields (surface area dependent)
-				Reload Charge: 755 megaawatt
-				Relaod Time: 24 seconds
+				[Range: 4.5km technically]
+				[Heal: 12-20 mill shields (surface area dependent)]
+				[Reload Charge: 755 megaawatt]
+				[Relaod Time: 24 seconds]
 			</Description>
 			<Icon>Textures\GUI\Icons\LargeArcEmitter.dds</Icon>
 			<CubeSize>Large</CubeSize>
@@ -37,7 +36,7 @@
 				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="1.0" EndY="3.0"/>
 				<MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="1.0"/>
 			</MountPoints>
-			<BlockPairName>HealGenerator</BlockPairName>
+			<BlockPairName>MagnaPulse_Gen</BlockPairName>
 			<MirroringZ>Y</MirroringZ>
 		</Definition>
 
@@ -46,15 +45,15 @@
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>AMP_FlakShotgun</SubtypeId>
+				<SubtypeId>Flechette_DoubleBarrel</SubtypeId>
 			</Id>
 			<DisplayName>Flechette Shotgun</DisplayName>
 			<Description>
 				Two shotguns duct taped together, what's to know
-				Range: 8km technically
-				Damage: Kinetic
-				Reload Charge: 20 megawatts
-				Relaod Time: 15 seconds
+				[Range: 8km technically]
+				[Damage: Kinetic]
+				[Reload Charge: 20 megawatts]
+				[Relaod Time: 15 seconds]
 			</Description>
 			<Icon>Textures\GUI\Icons\FlakShotgun.dds</Icon>
 			<CubeSize>Large</CubeSize>
@@ -76,14 +75,14 @@
 				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="4.00" EndX="2.00" EndY="6.00"/>
 			</MountPoints>
-			<BlockPairName>FlakShotgun</BlockPairName>
+			<BlockPairName>Flechette_DoubleBarrel</BlockPairName>
 		</Definition>
 
 
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>AMP_ImpulseTorch</SubtypeId>
+				<SubtypeId>Impulse_Torch</SubtypeId>
 			</Id>
 			<DisplayName>Impulse Torch</DisplayName>
 			<Description>
@@ -106,7 +105,7 @@
 				<Component Subtype="AMP_PlateComponent" Count="1"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
-			<BlockPairName>ImpulseTorchBase</BlockPairName>
+			<BlockPairName>Impulse_Torch</BlockPairName>
 
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00" Default="true"/>
@@ -139,11 +138,10 @@
      <DisplayName>ArcStrike CS-LR Torpedo</DisplayName>
      <Description>
     Anti Shield Torpedo
-    
-    14km range
-    Energy damage
-    no physical damage
-	2min reload
+    [14km range]
+    [Energy damage]
+    [no physical damage]
+	[2min reload]
 
 	 </Description>
      <Icon>Textures\GUI\Icons\OPA-Logo.dds</Icon>
@@ -197,10 +195,10 @@
      </Id>
      <DisplayName>SM-3 Counter Battery</DisplayName>
      <Description>Anti-Missile Torpedo
-	10km range with 1.5km minimum
-	8 mini torps target missiles
-	Will heal shields if it impacts
-	40 second reload
+	[10km range with 1.5km minimum]
+	[8 mini torps target missiles]
+	[Will heal shields if it impacts]
+	[40 second reload]
 
      </Description>
      <Icon>Textures\GUI\missile_defense.png</Icon>
@@ -267,7 +265,7 @@
      </Id>
      <DisplayName>Saber Chemical Laser</DisplayName>
      <Description>
-       [1.75kmkm range]
+       [1km range]
        [Energy damage]
        [Hitscan]
        [50% climbing cost]
@@ -332,7 +330,7 @@
      <DisplayName>Saber Armored Chemical Laser</DisplayName>
      <Description>
 	   Armored Laser
-       [1.75kmkm range]
+       [1km range]
        [Energy damage]
        [Hitscan]
        [50% climbing cost]
@@ -408,7 +406,15 @@
 			</Id>
 			<DisplayName>Nariman NanoDart Turret</DisplayName>
 			<Description>
-				Dual purpose turret
+			Dual Ammo, Dual Purpose Turret
+			Smart NanoDart:
+			[Range: 5km]
+			[Damage: Energy]
+			[Homing and AMS]
+			Concussion Bolt:
+			[Range: 3.5km]
+			[Damage: None]
+			[250m Push Field]
 			</Description>
 			<Icon>Textures\GUI\Icons\Ceis.dds</Icon>
 			<CubeSize>Large</CubeSize>
