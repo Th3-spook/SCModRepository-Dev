@@ -11,11 +11,10 @@
 			<DisplayName>Goncol MagnaPulse</DisplayName>
 			<Description>
 				Refresh your buddy's shields by manually shooting at it.
-				Grid limit 1
-				Range: 4.5km technically
-				Heal: 12-20 mill shields (surface area dependent)
-				Reload Charge: 755 megaawatt
-				Relaod Time: 24 seconds
+				[Range: 4.5km technically]
+				[Heal: 12-20 mill shields (surface area dependent)]
+				[Reload Charge: 755 megaawatt]
+				[Relaod Time: 24 seconds]
 			</Description>
 			<Icon>Textures\GUI\Icons\LargeArcEmitter.dds</Icon>
 			<CubeSize>Large</CubeSize>
@@ -51,10 +50,10 @@
 			<DisplayName>Flechette Shotgun</DisplayName>
 			<Description>
 				Two shotguns duct taped together, what's to know
-				Range: 8km technically
-				Damage: Kinetic
-				Reload Charge: 20 megawatts
-				Relaod Time: 15 seconds
+				[Range: 8km technically]
+				[Damage: Kinetic]
+				[Reload Charge: 20 megawatts]
+				[Relaod Time: 15 seconds]
 			</Description>
 			<Icon>Textures\GUI\Icons\FlakShotgun.dds</Icon>
 			<CubeSize>Large</CubeSize>
@@ -139,11 +138,10 @@
      <DisplayName>ArcStrike CS-LR Torpedo</DisplayName>
      <Description>
     Anti Shield Torpedo
-    
-    14km range
-    Energy damage
-    no physical damage
-	2min reload
+    [14km range]
+    [Energy damage]
+    [no physical damage]
+	[2min reload]
 
 	 </Description>
      <Icon>Textures\GUI\Icons\OPA-Logo.dds</Icon>
@@ -197,10 +195,10 @@
      </Id>
      <DisplayName>SM-3 Counter Battery</DisplayName>
      <Description>Anti-Missile Torpedo
-	10km range with 1.5km minimum
-	8 mini torps target missiles
-	Will heal shields if it impacts
-	40 second reload
+	[10km range with 1.5km minimum]
+	[8 mini torps target missiles]
+	[Will heal shields if it impacts]
+	[40 second reload]
 
      </Description>
      <Icon>Textures\GUI\missile_defense.png</Icon>
@@ -267,7 +265,7 @@
      </Id>
      <DisplayName>Saber Chemical Laser</DisplayName>
      <Description>
-       [1.75kmkm range]
+       [1km range]
        [Energy damage]
        [Hitscan]
        [50% climbing cost]
@@ -332,7 +330,7 @@
      <DisplayName>Saber Armored Chemical Laser</DisplayName>
      <Description>
 	   Armored Laser
-       [1.75kmkm range]
+       [1km range]
        [Energy damage]
        [Hitscan]
        [50% climbing cost]
@@ -408,7 +406,15 @@
 			</Id>
 			<DisplayName>Nariman NanoDart Turret</DisplayName>
 			<Description>
-				Dual purpose turret
+			Dual Ammo, Dual Purpose Turret
+			Smart NanoDart:
+			[Range: 5km]
+			[Damage: Energy]
+			[Homing and AMS]
+			Concussion Bolt:
+			[Range: 3.5km]
+			[Damage: None]
+			[250m Push Field]
 			</Description>
 			<Icon>Textures\GUI\Icons\Ceis.dds</Icon>
 			<CubeSize>Large</CubeSize>

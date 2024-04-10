@@ -142,6 +142,8 @@ namespace ShipPoints
 
 				S_Armored_Laser_Block@120;
                 S_Chem_Laser_Block@120;
+				Impulse_Torch@175;
+				Flechette_DoubleBarrel@200;
 				Nariman_Dart_Turret@225;
 				Counter_Battery@250;
 				SolHyp_ArcStrike_Torp@275;
@@ -548,7 +550,7 @@ Cat_StarcoreUlitity@21;
 				DETPAK@1;
 					DETPAK_3x1@1;
 						DETPAK_1x1@1;
-				AMP_HealGenerator@400;
+				MagnaPulse_Gen@400;
 				 CapacitorLarge@400;
 				MADAR@0;
 				 SC_Radome@10;
