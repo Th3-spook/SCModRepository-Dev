@@ -34,7 +34,7 @@ namespace Scripts
         private AmmoDef S_Chem_Laser_Ammo => new AmmoDef // StarCore AMS I
         {
             AmmoMagazine = "Energy", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
-            AmmoRound = "Starcore Large Laser", // Name of ammo in terminal, should be different for each ammo type used by the same weapon.
+            AmmoRound = "Stronk Laser", // Name of ammo in terminal, should be different for each ammo type used by the same weapon.
             HybridRound = true, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0.0000001f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
             BaseDamage = 24000f, // Direct damage; one steel plate is worth 100. 
@@ -426,7 +426,7 @@ namespace Scripts
         private AmmoDef S_Chem_Laser_Ammo_Fake => new AmmoDef // StarCore AMS I
         {
             AmmoMagazine = "", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
-            AmmoRound = "Starcore Large Laser Fake", // Name of ammo in terminal, should be different for each ammo type used by the same weapon.
+            AmmoRound = "Stronk Laser Fake", // Name of ammo in terminal, should be different for each ammo type used by the same weapon.
             HybridRound = true, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0.1f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
             BaseDamage = 0.4f, // Direct damage; one steel plate is worth 100. 

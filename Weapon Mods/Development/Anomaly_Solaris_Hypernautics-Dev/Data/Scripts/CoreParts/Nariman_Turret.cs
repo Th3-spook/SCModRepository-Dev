@@ -181,7 +181,7 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                K_SA_GaussRound_Standard, K_SA_GaussRound_Flashfire, // Must list all primary, shrapnel, and pattern ammos.
+                Nariman_Dart_Round, Nariman_EWAR_Round, // Must list all primary, shrapnel, and pattern ammos.
             },
             Animations = K_SA_GaussAPAnimations,
             //Upgrades = UpgradeModules,

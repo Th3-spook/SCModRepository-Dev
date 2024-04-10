@@ -30,7 +30,7 @@ namespace Scripts
 { // Don't edit above this line
     partial class Parts
     {
-        private AmmoDef K_SA_GaussRound_Standard => new AmmoDef // Your ID, for slotting into the Weapon CS
+        private AmmoDef Nariman_Dart_Round => new AmmoDef // Your ID, for slotting into the Weapon CS
         {
             AmmoMagazine = "Energy", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
             AmmoRound = "Smart NanoDart", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
@@ -413,7 +413,7 @@ namespace Scripts
             }, // Don't edit below this line
         };
 
-        private AmmoDef K_SA_GaussRound_Flashfire => new AmmoDef // Your ID, for slotting into the Weapon CS
+        private AmmoDef Nariman_EWAR_Round => new AmmoDef // Your ID, for slotting into the Weapon CS
         {
             AmmoMagazine = "K_GaussCase_S", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
             AmmoRound = "Concussion Bolter", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
@@ -583,7 +583,7 @@ namespace Scripts
                 Enable = true, // Enables EWAR effects AND DISABLES BASE DAMAGE AND AOE DAMAGE!!
                 Type = Push, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
                 Mode = Field, // Effect , Field
-                Strength = 10f,
+                Strength = 2f,
                 Radius = 250f, // Meters
                 Duration = 10, // In Ticks
                 StackDuration = false, // Combined Durations
@@ -617,7 +617,7 @@ namespace Scripts
                 {
                     Interval = 10, // Time between each pulse, in game ticks (60 == 1 second), starts at 0 (59 == tick 60).
                     PulseChance = 100, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
-                    GrowTime = 180, // How many ticks it should take the field to grow to full size.
+                    GrowTime = 20, // How many ticks it should take the field to grow to full size.
                     HideModel = false, // Hide the default bubble, or other model if specified.
                     ShowParticle = true, // Show Block damage effect.
                     TriggerRange = 250f, //range at which fields are triggered
@@ -644,7 +644,7 @@ namespace Scripts
                 Guidance = None, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 TargetLossDegree = 80f, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). Please have a value for this, It stops Bad things.
+                MaxLifeTime = 300, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). Please have a value for this, It stops Bad things.
                 AccelPerSec = 0f, // Meters Per Second. This is the spawning Speed of the Projectile, and used by turning.
                 DesiredSpeed = 3500, // voxel phasing if you go above 5100
                 MaxTrajectory = 3500f, // Max Distance the projectile or beam can Travel.
