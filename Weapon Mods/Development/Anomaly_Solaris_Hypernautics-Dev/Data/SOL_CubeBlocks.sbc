@@ -399,7 +399,7 @@
 
 
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
-			<!-- Nariman Anti Armour -->
+			<!-- Nariman Anti Anything -->
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>Nariman_Dart_Turret</SubtypeId>
@@ -409,12 +409,14 @@
 			Dual Ammo, Dual Purpose Turret
 			Smart NanoDart:
 			[Range: 5km]
+			[Velocity: 2.5km/s]
 			[Damage: Energy]
 			[Homing and AMS]
 			Concussion Bolt:
 			[Range: 3.5km]
-			[Damage: None]
-			[250m Push Field]
+			[Velocity: 600m/s]
+			[Damage: Energy]
+			[Homing and 3m Push Field]
 			</Description>
 			<Icon>Textures\GUI\Icons\Ceis.dds</Icon>
 			<CubeSize>Large</CubeSize>
