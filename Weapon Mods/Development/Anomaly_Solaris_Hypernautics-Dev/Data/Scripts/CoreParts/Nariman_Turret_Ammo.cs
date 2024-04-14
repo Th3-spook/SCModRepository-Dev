@@ -420,7 +420,7 @@ namespace Scripts
             HybridRound = true, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0.05f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
             BaseDamage = 10300f, // Direct damage; one steel plate is worth 100.
-            Mass = 40f, // In kilograms; how much force the impact will apply to the target.
+            Mass = 400f, // In kilograms; how much force the impact will apply to the target.
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 60f, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself.
@@ -541,8 +541,8 @@ namespace Scripts
                 ByBlockHit = new ByBlockHitDef
                 {
                     Enable = false,
-                    Radius = 5f, // Meters
-                    Damage = 5f,
+                    Radius = 15f, // Meters
+                    Damage = 5000f,
                     Depth = 3f, // Meters
                     MaxAbsorb = 0f,
                     Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
@@ -557,9 +557,9 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 5f, // Meters
+                    Radius = 15f, // Meters
                     Damage = 2000f,
-                    Depth = 3f,
+                    Depth = 5f,
                     MaxAbsorb = 0f,
                     Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
@@ -580,7 +580,7 @@ namespace Scripts
             },
                         Ewar = new EwarDef
             {
-                Enable = true, // Enables EWAR effects AND DISABLES BASE DAMAGE AND AOE DAMAGE!!
+                Enable = false, // Enables EWAR effects AND DISABLES BASE DAMAGE AND AOE DAMAGE!!
                 Type = Push, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
                 Mode = Field, // Effect , Field
                 Strength = 0.15f,
