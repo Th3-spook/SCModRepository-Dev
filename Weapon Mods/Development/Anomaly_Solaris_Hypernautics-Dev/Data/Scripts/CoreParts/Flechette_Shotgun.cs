@@ -39,7 +39,7 @@ namespace Scripts
             Targeting = new TargetingDef
             {
                 Threats = new[] {
-                    Grids, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals
+                    Grids, Neutrals, Projectiles,// Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals
                 },
                 SubSystems = new[] {
                     Thrust, Offense, Any, // Subsystem targeting priority: Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any
@@ -129,7 +129,7 @@ namespace Scripts
                     HeatPerShot = 1, // Heat generated per shot.
                     MaxHeat = 70000, // Max heat before weapon enters cooldown (70% of max heat).
                     Cooldown = .95f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
-                    HeatSinkRate = 9000000, // Amount of heat lost per second.
+                    HeatSinkRate = 90000, // Amount of heat lost per second.
                     DegradeRof = false, // Progressively lower rate of fire when over 80% heat threshold (80% of max heat).
                     ShotsInBurst = 0, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
                     DelayAfterBurst = 0, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
