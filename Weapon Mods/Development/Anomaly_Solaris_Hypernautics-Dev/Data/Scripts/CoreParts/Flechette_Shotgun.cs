@@ -49,7 +49,7 @@ namespace Scripts
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // Minimum radius of threat to engage.
                 MaximumDiameter = 0, // Maximum radius of threat to engage; 0 = unlimited.
-                MaxTargetDistance = 500, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
+                MaxTargetDistance = 1500, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
                 MinTargetDistance = 0, // Minimum distance at which targets will be automatically shot at.
                 TopTargets = 6, // Maximum number of targets to randomize between; 0 = unlimited.
                 TopBlocks = 8, // Maximum number of blocks to randomize between; 0 = unlimited.
@@ -165,15 +165,15 @@ namespace Scripts
                         {
                             Loop = false, // Set this to the same as in the particle sbc!
                             Restart = false, // Whether to end a looping effect instantly when firing stops.
-                            MaxDistance = 10000, // Max distance at which this effect should be visible. NOTE: This will use whichever MaxDistance value is higher across Effect1 and Effect2!
-                            MaxDuration = 0, // How many ticks the effect should be ended after, if it's still running.
-                            Scale = 1f, // Scale of effect.
+                            //MaxDistance = 10000, // Max distance at which this effect should be visible. NOTE: This will use whichever MaxDistance value is higher across Effect1 and Effect2!
+                            //MaxDuration = 0, // How many ticks the effect should be ended after, if it's still running.
+                            //Scale = 1f, // Scale of effect.
                         },
                     },
                 },
             },
             Ammos = new[] {
-                Flechette_Shell, FlakEwar,// Must list all primary, shrapnel, and pattern ammos.
+                Flechette_Buckshot, Flechette_Smart,// Must list all primary, shrapnel, and pattern ammos.
             },
             Animations = FlakAnimation,
             //Upgrades = UpgradeModules,

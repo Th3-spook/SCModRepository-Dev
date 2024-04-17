@@ -152,7 +152,7 @@ namespace Scripts {
                     Effect1 = new ParticleDef
                     {
                         Name = "K_SA_GaussFire", // SubtypeId of muzzle particle effect.
-                        Color = Color(red: 45, green: 90, blue: 0, alpha: 1), // Deprecated, set color in particle sbc.
+                        Color = Color(red: 1, green: 2, blue: 0, alpha: 1), // Deprecated, set color in particle sbc.
                         Offset = Vector(x: 0, y: 0, z: 0), // Offsets the effect from the muzzle empty.
 
                         Extras = new ParticleOptionDef
