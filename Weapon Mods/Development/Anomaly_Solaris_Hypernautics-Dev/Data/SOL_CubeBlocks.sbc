@@ -49,11 +49,13 @@
 			</Id>
 			<DisplayName>Flechette Shotgun</DisplayName>
 			<Description>
-				Two shotguns duct taped together, what's to know
-				[Range: 8km technically]
+				Two shotguns duct taped together, with two ammo's.
+				Buckshot:
+				[Range: 2km technically]
 				[Damage: Kinetic]
-				[Reload Charge: 20 megawatts]
-				[Relaod Time: 15 seconds]
+				[Reload Time: 4 seconds]
+				Smart Flak:
+				[Homing and AMS]
 			</Description>
 			<Icon>Textures\GUI\Icons\FlakShotgun.dds</Icon>
 			<CubeSize>Large</CubeSize>
@@ -97,7 +99,7 @@
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="2" z="4"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\ImpulseTorchBase.mwm</Model>
+			<Model>Models\FlamethrowerBase.mwm</Model>
 			<Components>
 				<Component Subtype="AMP_FrameComponent" Count="1"/>
 				<Component Subtype="Computer" Count="1"/>
