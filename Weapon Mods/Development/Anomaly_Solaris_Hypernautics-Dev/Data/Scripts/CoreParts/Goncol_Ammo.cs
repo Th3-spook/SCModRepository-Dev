@@ -127,7 +127,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 8000f, // Multiplier for damage against shields.
+                    Modifier = 2000f, // Multiplier for damage against shields.
                     Type = Heal, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -2f, // If greater than zero, the percentage of damage that will penetrate the shield.
                 },
