@@ -39,7 +39,6 @@ namespace Scripts
 { // Don't edit above this line
     partial class Parts
     {
-
 	    private AmmoDef Afterburner_ammo_2 => new AmmoDef
         {
             AmmoMagazine = "Energy", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
