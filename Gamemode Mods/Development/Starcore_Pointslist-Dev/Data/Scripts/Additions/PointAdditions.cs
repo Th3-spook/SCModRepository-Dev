@@ -660,15 +660,15 @@ Cat_Strikecraft@23;
 
 
 Cat_Fletcher_Subtypes@23;
-				381mmDualR@400;
-                381mmDualNR@400;
+				381mmDualR@250;
+                381mmDualNR@250;
                 380mmMLE1935@400;
                 15cmSKC28R@175;
                 15cmSKC28NR@175;
                 128mmL45@200;
                 128mmSKC34@250;
-                127mmMk12@220;
-                127mmMk24@220;
+                127mmMk12@175;
+                127mmMk24@175;
                 127mmMk32@250;
                 127mmMk56@350;
                 105mmTwin@100;
