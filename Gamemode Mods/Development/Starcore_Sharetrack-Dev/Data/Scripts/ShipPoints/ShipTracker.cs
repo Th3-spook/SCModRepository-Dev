@@ -555,6 +555,12 @@ namespace klime.PointCheck
         {
             switch (t_N)
             {
+                case "Shield Controller":
+                case "Shield Controller Table":
+                case "Structural Integrity Field Generator"
+                    t_N = "Shield Controller";
+                    mCs = 50f;
+                    break;
                 case "Blink Drive Large":
                     t_N = "Blink Drive";
                     mCs = 0.15f;
