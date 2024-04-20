@@ -557,7 +557,7 @@ namespace klime.PointCheck
             {
                 case "Shield Controller":
                 case "Shield Controller Table":
-                case "Structural Integrity Field Generator"
+                case "Structural Integrity Field Generator":
                     t_N = "Shield Controller";
                     mCs = 50f;
                     break;
