@@ -676,8 +676,8 @@ namespace klime.PointCheck
                     costGroupName = "Taiidan";
                     costMultiplier = 0.25f;
                     break;
-                case "[40k] Gothic Torpedo":
-                    costGroupName = "Gothic Torpedo";
+                case "[40K] Gothic Torpedo Launcher":
+                    costGroupName = "Gothic Torpedo Launcher";
                     costMultiplier = 0.15f;
                     break;
                 case "[MID] AX 'Spitfire' Light Rocket Turret":
@@ -716,8 +716,8 @@ namespace klime.PointCheck
                 case "Shield Controller":
                 case "Shield Controller Table":
                 case "Structural Integrity Field Generator":
-                    costGroupName = "Shield Controller";
-                    costMultiplier = 50f;
+                    costGroupName = "Defensive Generator";
+                    costMultiplier = 50.00f;
                     break;
             }
         }
