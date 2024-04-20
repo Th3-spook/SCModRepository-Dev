@@ -559,6 +559,12 @@ namespace klime.PointCheck
         {
             switch (costGroupName)
             {
+                case "Shield Controller":
+                case "Shield Controller Table":
+                case "Structural Integrity Field Generator"
+                    t_N = "Shield Controller";
+                    mCs = 50f;
+                    break;
                 case "Blink Drive Large":
                     costGroupName = "Blink Drive";
                     costMultiplier = 0.15f;
