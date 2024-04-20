@@ -8,7 +8,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>MagnaPulse_Gen</SubtypeId>
 			</Id>
-			<DisplayName>Goncol MagnaPulse</DisplayName>
+			<DisplayName>[SOL] Goncol MagnaPulse</DisplayName>
 			<Description>
 				Refresh your buddy's shields by manually shooting at it.
 				[Range: 4.5km technically]
@@ -47,7 +47,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>Flechette_DoubleBarrel</SubtypeId>
 			</Id>
-			<DisplayName>Flechette Shotgun</DisplayName>
+			<DisplayName>[SOL] Flechette Shotgun</DisplayName>
 			<Description>
 				Two shotguns duct taped together, with two ammo's.
 				Buckshot:
@@ -86,13 +86,12 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>Impulse_Torch</SubtypeId>
 			</Id>
-			<DisplayName>Impulse Torch</DisplayName>
+			<DisplayName>[SOL] Impulse Torch</DisplayName>
 			<Description>
 				Its a offensive afterburner that gimbals
-				Range: 1km technically
-				Damage: Energy
-				Reload Charge: 4 megawatts
-				Relaod Time: 10 seconds
+				[Range: 600m]
+				[Damage: Energy]
+				[Afterburner and Impulse]
 			</Description>
 			<Icon>Textures\GUI\Icons\ImpulseTorchBase.dds</Icon>
 			<CubeSize>Large</CubeSize>
@@ -137,7 +136,7 @@
        <TypeId>ConveyorSorter</TypeId>
        <SubtypeId>SolHyp_ArcStrike_Torp</SubtypeId>
      </Id>
-     <DisplayName>ArcStrike CS-LR Torpedo</DisplayName>
+     <DisplayName>[SOL] ArcStrike CS-LR Torpedo</DisplayName>
      <Description>
     Anti Shield Torpedo
     [14km range]
@@ -195,7 +194,7 @@
        <TypeId>ConveyorSorter</TypeId>
        <SubtypeId>Counter_Battery</SubtypeId>
      </Id>
-     <DisplayName>SM-3 Counter Battery</DisplayName>
+     <DisplayName>[SOL] SM-3 Counter Battery</DisplayName>
      <Description>Anti-Missile Torpedo
 	[10km range with 1.5km minimum]
 	[8 mini torps target missiles]
@@ -265,7 +264,7 @@
        <TypeId>ConveyorSorter</TypeId>
        <SubtypeId>S_Chem_Laser_Block</SubtypeId>
      </Id>
-     <DisplayName>Saber Chemical Laser</DisplayName>
+     <DisplayName>[SOL] Saber Chemical Laser</DisplayName>
      <Description>
        [1km range]
        [Energy damage]
@@ -329,7 +328,7 @@
        <TypeId>ConveyorSorter</TypeId>
        <SubtypeId>S_Armored_Laser_Block</SubtypeId>
      </Id>
-     <DisplayName>Saber Armored Chemical Laser</DisplayName>
+     <DisplayName>[SOL] Saber Armored Chemical Laser</DisplayName>
      <Description>
 	   Armored Laser
        [1km range]
@@ -406,7 +405,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>Nariman_Dart_Turret</SubtypeId>
 			</Id>
-			<DisplayName>Nariman NanoDart Turret</DisplayName>
+			<DisplayName>[SOL] Nariman NanoDart Turret</DisplayName>
 			<Description>
 			Dual Ammo, Dual Purpose Turret
 			Smart NanoDart:
@@ -502,7 +501,7 @@
 			<TypeId>ConveyorSorter</TypeId>
         <SubtypeId>SolHyp_Magnetic_Coilgun</SubtypeId>
       </Id>
-      <DisplayName>Hercules Magnetic Accelerator Coilgun</DisplayName>
+      <DisplayName>[SOL] Hercules Magnetic Accelerator Coilgun</DisplayName>
 	  <Description>
       Hercules MAC
       [10km range, 5km effective range]
