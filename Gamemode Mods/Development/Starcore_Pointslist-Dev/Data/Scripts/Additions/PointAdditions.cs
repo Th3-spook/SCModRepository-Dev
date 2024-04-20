@@ -520,7 +520,7 @@ Cat_Darth40kWeapons@20;
 				
 				NovaCannon@800;
 				MacroCannon@200;
-				MacroHeavyCannon@450;
+				HeavyMacroCannon@450;
 				MacroTurret@300;
 				MacroHeavyTurret@450;
 				MacroLightTurret@150;
