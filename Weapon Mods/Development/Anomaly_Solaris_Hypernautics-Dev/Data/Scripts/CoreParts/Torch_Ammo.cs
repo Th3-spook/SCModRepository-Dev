@@ -36,11 +36,11 @@ namespace Scripts
             AmmoMagazine = "Energy", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
             AmmoRound = "Torch", // Name of ammo in terminal, should be different for each ammo type used by the same weapon.
             HybridRound = true, // Use both a physical ammo magazine and energy per shot.
-            EnergyCost = 0.0000001f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
+            EnergyCost = 0.001f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
             BaseDamage = 24000f, // Direct damage; one steel plate is worth 100. 
-            Mass = 0f, // In kilograms; how much force the impact will apply to the target.
+            Mass = 20f, // In kilograms; how much force the impact will apply to the target.
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
-            BackKickForce = 0, // Recoil.
+            BackKickForce = 5000000f, // Recoil.
             DecayPerShot = 0f, // Damage to the firing weapon itself.
             HardPointUsable = true, // Whether this is a primary ammo type fired directly by the turret. Set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             EnergyMagazineSize = 300, // For energy weapons, how many shots to fire before reloading.
@@ -158,11 +158,11 @@ namespace Scripts
                 ByBlockHit = new ByBlockHitDef
                 {
                     Enable = false,
-                    Radius = 0f, // Meters
-                    Damage = 0,
-                    Depth = 0f, // Meters
+                    Radius = 1f, // Meters
+                    Damage = 1,
+                    Depth = 1f, // Meters
                     MaxAbsorb = 0f,
-                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -257,12 +257,12 @@ namespace Scripts
             Trajectory = new TrajectoryDef
             {
                 Guidance = None, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
-                TargetLossDegree = 0f, // Degrees, Is pointed forward
+                TargetLossDegree = 80f, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). Please have a value for this, It stops Bad things.
                 AccelPerSec = 0f, // Meters Per Second. This is the spawning Speed of the Projectile, and used by turning.
                 DesiredSpeed = 3600, // voxel phasing if you go above 5100
-                MaxTrajectory = 1000f, // Max Distance the projectile or beam can Travel.
+                MaxTrajectory = 600f, // Max Distance the projectile or beam can Travel.
                 DeaccelTime = 0, // 0 is disabled, a value causes the projectile to come to rest overtime, (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed. Be warned, you can make your projectile go backwards.
@@ -271,12 +271,12 @@ namespace Scripts
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
-                    Aggressiveness = 0f, // controls how responsive tracking is.
-                    MaxLateralThrust = 0, // controls how sharp the trajectile may turn
-                    TrackingDelay = 0, // Measured in Shape diameter units traveled.
+                    Aggressiveness = 1f, // controls how responsive tracking is.
+                    MaxLateralThrust = 0.5, // controls how sharp the trajectile may turn
+                    TrackingDelay = 5, // Measured in Shape diameter units traveled.
                     MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
-                    MaxTargets = 0, // Number of targets allowed before ending, 0 = unlimited
+                    MaxTargets = 3, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
                     Roam = false, // Roam current area after target loss
                     KeepAliveAfterTargetLoss = false, // Whether to stop early death of projectile on target loss
@@ -292,31 +292,24 @@ namespace Scripts
                     Persist = false,
                 },
             },
-             AmmoGraphics = new GraphicDef
+            AmmoGraphics = new GraphicDef
             {
-                ModelName = "", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"
-                VisualProbability = 1f, // %
-                ShieldHitDraw = true,
-                Decals = new DecalDef  //will need pattern ammo if laggy
-                {
-                    MaxAge = 300,
-                    Map = new[]
-                    {
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Metal",
-                            DecalMaterial = "REE_Laser_Decal",
-                        },
-                    },
-                },
+                ModelName = "",
+                VisualProbability = 1f,
+                ShieldHitDraw = false,
                 Particles = new AmmoParticleDef
                 {
                     Ammo = new ParticleDef
                     {
                         Name = "", //ShipWelderArc
-                        Offset = Vector(x: 128, y: 0, z: 0),
+                        //ShrinkByDistance = false,
+                        Color = Color(red: 128, green: 0, blue: 0, alpha: 32),
+                        Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
+                            Restart = false,
+                            MaxDistance = 5000,
+                            MaxDuration = 0,
                             Scale = 1,
                         },
                     },
@@ -324,9 +317,14 @@ namespace Scripts
                     {
                         Name = "",
                         ApplyToShield = true,
+                        //ShrinkByDistance = false,
+                        Color = Color(red: 3, green: 1.9f, blue: 1f, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
+                            Restart = false,
+                            MaxDistance = 5000,
+                            MaxDuration = 0,
                             Scale = 1,
                             HitPlayChance = 1f,
                         },
@@ -335,9 +333,14 @@ namespace Scripts
                     {
                         Name = "",
                         ApplyToShield = true,
+                        //ShrinkByDistance = false,
+                        Color = Color(red: 3, green: 1.9f, blue: 1f, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
+                            Restart = false,
+                            MaxDistance = 5000,
+                            MaxDuration = 30,
                             Scale = 1,
                             HitPlayChance = 1f,
                         },
@@ -349,26 +352,26 @@ namespace Scripts
                     WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
-                        Enable = true,
-                        Length = 1f, //
-                        Width = 1f, //
-                        Color = Color(red: 1, green: 12, blue: 1f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
+                        Enable = false,
+                        Length = 5f,
+                        Width = 0.45f,
+                        Color = Color(red: 0, green: 12, blue: 21f, alpha: 1),
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                            "WeaponLaser", // Please always have this Line set, if this Section is enabled.
+                            "WeaponLaser",
                         },
                         TextureMode = Normal, // Normal, Cycle, Chaos, Wave
                         Segmentation = new SegmentDef
                         {
                             Enable = false, // If true Tracer TextureMode is ignored
                             Textures = new[] {
-                                "", // Please always have this Line set, if this Section is enabled.
+                                "",
                             },
                             SegmentLength = 0f, // Uses the values below.
                             SegmentGap = 0f, // Uses Tracer textures and values
                             Speed = 1f, // meters per second
-                            Color = Color(red: 2, green: 2, blue: 2.5f, alpha: 1),
+                            Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
                             WidthMultiplier = 1f,
                             Reverse = false,
                             UseLineVariance = true,
@@ -378,15 +381,15 @@ namespace Scripts
                     },
                     Trail = new TrailDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Textures = new[] {
-                            "WeaponLaser", // Please always have this Line set, if this Section is enabled.
+                            "WeaponLaser",
                         },
                         TextureMode = Normal,
-                        DecayTime = 1, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
-                        Color = Color(red: 12, green: 12, blue: 1, alpha: 1),
-                        Back = true,
-                        CustomWidth = 1f,
+                        DecayTime = 100,
+                        Color = Color(red: 0, green: 8, blue: 9f, alpha: 1),
+                        Back = false,
+                       CustomWidth = 0.2f,
                         UseWidthVariance = false,
                         UseColorFade = true,
                     },
@@ -400,16 +403,17 @@ namespace Scripts
             },
             AmmoAudio = new AmmoAudioDef
             {
-                TravelSound = "", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
+                TravelSound = "",
                 HitSound = "",
+                ShotSound = "",
                 ShieldHitSound = "",
                 PlayerHitSound = "",
                 VoxelHitSound = "",
                 FloatingHitSound = "",
-                HitPlayChance = 1f,
+                HitPlayChance = 0.5f,
                 HitPlayShield = true,
             },
-            Ejection = new EjectionDef // Optional Component, allows generation of Particle or Item (Typically magazine), on firing, to simulate Tank shell ejection
+            Ejection = new EjectionDef
             {
                 Type = Particle, // Particle or Item (Inventory Component)
                 Speed = 100f, // Speed inventory is ejected from in dummy direction
@@ -422,7 +426,6 @@ namespace Scripts
                 }
             }, // Don't edit below this line
         };
-    
-        }
+    }
 }
 
