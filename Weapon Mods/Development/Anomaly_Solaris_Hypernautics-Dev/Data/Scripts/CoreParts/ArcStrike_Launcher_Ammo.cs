@@ -128,7 +128,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 6f, // Multiplier for damage against shields.
+                    Modifier = 8f, // Multiplier for damage against shields.
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -2f, // If greater than zero, the percentage of damage that will penetrate the shield.
                 },
@@ -372,7 +372,8 @@ namespace Scripts
                             SegmentLength = 0f, // Uses the values below.
                             SegmentGap = 0f, // Uses Tracer textures and values
                             Speed = 1f, // meters per second
-                            Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
+                            Color = Color(red: 1.5f, green: 0.5f, blue: 1.5f, alpha: 1),
+                            //Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
                             WidthMultiplier = 1f,
                             Reverse = false,
                             UseLineVariance = true,
@@ -519,7 +520,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 6f, // Multiplier for damage against shields.
+                    Modifier = 8f, // Multiplier for damage against shields.
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -2f, // If greater than zero, the percentage of damage that will penetrate the shield.
                 },
@@ -736,7 +737,8 @@ namespace Scripts
                         Enable = true,
                         Length = 8f,
                         Width = 2f,
-                        Color = Color(red: 20, green: 20, blue: 80f, alpha: 1),
+                        //Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
+                        Color = Color(red: 40f, green: 25, blue: 40f, alpha: 1),
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
@@ -768,7 +770,8 @@ namespace Scripts
                         },
                         TextureMode = Normal,
                         DecayTime = 120,
-                        Color = Color(red: 20, green: 20, blue: 80f, alpha: 1),
+                        //Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
+                        Color = Color(red: 40f, green: 25f, blue: 40f, alpha: 1),
                         Back = false,
                         CustomWidth = 0.2f,
                         UseWidthVariance = false,
@@ -899,7 +902,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 6f, // Multiplier for damage against shields.
+                    Modifier = 8f, // Multiplier for damage against shields.
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -2f, // If greater than zero, the percentage of damage that will penetrate the shield.
                 },
@@ -1116,7 +1119,8 @@ namespace Scripts
                         Enable = true,
                         Length = 8f,
                         Width = 1f,
-                        Color = Color(red: 30, green: 30, blue: 90f, alpha: 1),
+                        //Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
+                        Color = Color(red: 40f, green: 25f, blue: 40f, alpha: 1),
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
@@ -1272,7 +1276,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 6f, // Multiplier for damage against shields.
+                    Modifier = 8f, // Multiplier for damage against shields.
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -2f, // If greater than zero, the percentage of damage that will penetrate the shield.
                 },
@@ -1658,7 +1662,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 6f, // Multiplier for damage against shields.
+                    Modifier = 8f, // Multiplier for damage against shields.
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -2f, // If greater than zero, the percentage of damage that will penetrate the shield.
                 },
@@ -1907,7 +1911,8 @@ namespace Scripts
                         },
                         TextureMode = Normal,
                         DecayTime = 128,
-                        Color = Color(red: 0, green: 0, blue: 1, alpha: 1),
+                        //Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
+                        Color = Color(red: 2, green: 1, blue: 2, alpha: 1),
                         Back = false,
                         CustomWidth = 0,
                         UseWidthVariance = false,
@@ -2039,7 +2044,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 6f, // Multiplier for damage against shields.
+                    Modifier = 8f, // Multiplier for damage against shields.
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -2f, // If greater than zero, the percentage of damage that will penetrate the shield.
                 },
@@ -2288,7 +2293,8 @@ namespace Scripts
                         },
                         TextureMode = Normal,
                         DecayTime = 128,
-                        Color = Color(red: 0, green: 0, blue: 1, alpha: 1),
+                        //Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
+                        Color = Color(red: 2, green: 1, blue: 2, alpha: 1),
                         Back = false,
                         CustomWidth = 0,
                         UseWidthVariance = false,
@@ -2326,7 +2332,5 @@ namespace Scripts
                 }
             }, // Don't edit below this line
         };
-        
-
-        }
+    }
 }
