@@ -2332,7 +2332,5 @@ namespace Scripts
                 }
             }, // Don't edit below this line
         };
-        
-
-        }
+    }
 }
