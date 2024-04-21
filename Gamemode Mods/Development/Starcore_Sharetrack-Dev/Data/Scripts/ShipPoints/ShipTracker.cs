@@ -1,4 +1,4 @@
-using Draygo.API;
+﻿using Draygo.API;
 using ProtoBuf;
 using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
@@ -51,7 +51,7 @@ namespace klime.PointCheck
         [ProtoMember(10)] public int BlockCount;
         [ProtoMember(11)] public float ShieldStrength;
         [ProtoMember(12)] public float CurrentShieldStrength;
-        [ProtoMember(40)] public float OriginalShieldStrength = -1;
+        [ProtoMember(41)] public float OriginalShieldStrength = -1;
         [ProtoMember(13)] public int PCU;
         //[ProtoMember(14)] public float DPS;
         [ProtoMember(16)] public Dictionary<string, int> GunL = new Dictionary<string, int>();
@@ -676,8 +676,8 @@ namespace klime.PointCheck
                     costGroupName = "Taiidan";
                     costMultiplier = 0.25f;
                     break;
-                case "[40k] Gothic Torpedo":
-                    costGroupName = "Gothic Torpedo";
+                case "[40K] Gothic Torpedo Launcher":
+                    costGroupName = "Gothic Torpedo Launcher";
                     costMultiplier = 0.15f;
                     break;
                 case "[MID] AX 'Spitfire' Light Rocket Turret":
@@ -716,8 +716,8 @@ namespace klime.PointCheck
                 case "Shield Controller":
                 case "Shield Controller Table":
                 case "Structural Integrity Field Generator":
-                    costGroupName = "Shield Controller";
-                    costMultiplier = 50f;
+                    costGroupName = "Defensive Generator";
+                    costMultiplier = 50.00f;
                     break;
             }
         }
