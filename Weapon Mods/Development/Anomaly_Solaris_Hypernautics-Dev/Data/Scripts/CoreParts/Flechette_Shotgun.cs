@@ -145,8 +145,8 @@ namespace Scripts
                 Audio = new HardPointAudioDef
                 {
                     PreFiringSound = "", // Audio for warmup effect.
-                    FiringSound = "ShipLargeThrusterHydrogen", // Audio for firing.
-                    FiringSoundPerShot = false, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
+                    FiringSound = "VenatorLaserFiring", // Audio for firing.
+                    FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
                     ReloadSound = "ArcBlockPiston", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "",
                     HardPointRotationSound = "WepTurretGatlingRotate", // Audio played when turret is moving.
