@@ -467,7 +467,7 @@ namespace klime.PointCheck
                         }
                     }
                 }
-                else if ((PointCheck.PointValues.ContainsKey(id) && isTerminalBlock) && !(block is IMyGyro) && !(block is IMyReactor) && !(block is IMyBatteryBlock) && !(block is IMyCockpit) && !(block is IMyDecoy) && !(block is IMyShipDrill) && !(block is IMyGravityGeneratorBase) && !(block is IMyShipWelder) && !(block is IMyShipGrinder) && !(block is IMyThrust) && !(block is IMyRadioAntenna) && !(block is IMyUpgradeModule && !(block.BlockDefinition.Id.SubtypeName == "BlinkDriveLarge")))
+                else if ((PointCheck.PointValues.ContainsKey(id) && isTerminalBlock) && !(block is IMyGyro) && !(block is IMyReactor) && !(block is IMyBatteryBlock) && !(block is IMyCockpit) && !(block is IMyDecoy) && !(block is IMyShipDrill) && !(block is IMyGravityGeneratorBase) && !(block is IMyShipWelder) && !(block is IMyShipGrinder) && !(block is IMyThrust) && !(block is IMyRadioAntenna) && !(block.BlockDefinition.Id.SubtypeName == "BlinkDriveLarge"))
                 {
                     IMyTerminalBlock tBlock = block as IMyTerminalBlock;
                     var t_N = tBlock.DefinitionDisplayNameText;
