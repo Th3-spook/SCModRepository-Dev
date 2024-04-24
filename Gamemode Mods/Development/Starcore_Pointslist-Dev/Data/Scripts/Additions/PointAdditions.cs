@@ -142,6 +142,8 @@ namespace ShipPoints
 
 				S_Armored_Laser_Block@120;
                 S_Chem_Laser_Block@120;
+				Impulse_Torch@175;
+				Flechette_DoubleBarrel@200;
 				Nariman_Dart_Turret@225;
 				Counter_Battery@250;
 				SolHyp_ArcStrike_Torp@275;
@@ -510,14 +512,27 @@ Cat_Darth40kWeapons@20;
 				NID_Hivedrone@350;
 				NID_BioplasmaHivedrone@400;
 				NID_Leap@50;
-				LightParticleWhip@200;
-				ParticleWhip@400;
+
+				MonoWhip@800;
+				LightLightningArc@250;
+				LightningArc@450;
+				FluxArcLarge@100;
+				
 				NovaCannon@800;
 				MacroCannon@200;
-    				LanceBattery@400;
+				HeavyMacroCannon@450;
+				MacroTurret@300;
+				MacroHeavyTurret@450;
+				MacroLightTurret@150;
+    			LanceBattery@400;
 				LanceLightBattery@280;
 				LanceHeavyBattery@650;
-				GothicTorp@300;
+				FixedLance@350;
+				GothicTorp@150;
+				AegisFlakTurret@120;
+				
+
+
 
 				
 				65_Launcher_FixedMount@350;
@@ -548,13 +563,13 @@ Cat_StarcoreUlitity@21;
 				DETPAK@1;
 					DETPAK_3x1@1;
 						DETPAK_1x1@1;
-				AMP_HealGenerator@400;
+				MagnaPulse_Gen@400;
 				 CapacitorLarge@400;
 				MADAR@0;
 				 SC_Radome@10;
 				 Starcore_RWR_Projectiles@5;
 				  SC_Flare@50;
-				SI_Field_Gen@450;
+				SI_Field_Gen@50;
 				 SELtdLargeNanobotBuildAndRepairSystem@50;
 				  PM_LG_BLASTPLATE_BLASTPLATE@100;
 				  REINFORCED_BLASTPLATE@100;
@@ -645,21 +660,21 @@ Cat_Strikecraft@23;
 
 
 Cat_Fletcher_Subtypes@23;
-				381mmDualR@400;
-                381mmDualNR@400;
+				381mmDualR@250;
+                381mmDualNR@250;
                 380mmMLE1935@400;
                 15cmSKC28R@175;
                 15cmSKC28NR@175;
                 128mmL45@200;
                 128mmSKC34@250;
-                127mmMk12@220;
-                127mmMk24@220;
+                127mmMk12@175;
+                127mmMk24@175;
                 127mmMk32@250;
                 127mmMk56@350;
                 105mmTwin@100;
                 PomPomMain@75;
-                150mmCasemate@100;
-                150mmCasemateTwin@125;
+                150mmCasemate@150;
+                150mmCasemateTwin@175;
                 BoforTwinRemodel@50;
                 BoforSingleRemodel@60;
                 QuadBofor@75;
