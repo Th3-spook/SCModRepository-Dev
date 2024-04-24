@@ -63,8 +63,10 @@ namespace Scripts {
                 MaximumDiameter = 0, // Maximum radius of threat to engage; 0 = unlimited.
                 MaxTargetDistance = 5000, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
                 MinTargetDistance = 0, // Minimum distance at which targets will be automatically shot at.
-                TopTargets = 4, // Maximum number of targets to randomize between; 0 = unlimited.
-                TopBlocks = 8, // Maximum number of blocks to randomize between; 0 = unlimited.
+                TopTargets = 10, // Maximum number of targets to randomize between; 0 = unlimited.
+                CycleTargets = 0, // Number of targets to "cycle" per acquire attempt.
+                TopBlocks = 10, // Maximum number of blocks to randomize between; 0 = unlimited.
+                CycleBlocks = 4, // Number of blocks to "cycle" per acquire attempt.
                 StopTrackingSpeed = 0, // Do not track threats traveling faster than this speed; 0 = unlimited.
             },
             HardPoint = new HardPointDef
