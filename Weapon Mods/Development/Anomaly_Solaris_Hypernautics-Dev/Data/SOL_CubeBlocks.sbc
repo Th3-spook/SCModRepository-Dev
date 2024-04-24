@@ -269,8 +269,8 @@
        [1km range]
        [Energy damage]
        [Hitscan]
-       [50% climbing cost]
-       Uses a limited fuel to power an extremely powerful laser for 5 seconds before running out.
+       [Reload: 35sec]
+       Uses a limited capacity fuel cell to power a powerful laser for 2 seconds before running out and needing 35 seconds to reset for another firing.
      </Description>
      <Icon>Textures\Icons\laser icon.png</Icon>
      <CubeSize>Large</CubeSize>
@@ -334,8 +334,8 @@
        [1km range]
        [Energy damage]
        [Hitscan]
-       [50% climbing cost]
-       Uses a limited fuel to power an extremely powerful laser for 5 seconds before running out.
+       [Reload: 35sec]
+       Uses a limited capacity fuel cell to power a powerful laser for 2 seconds before running out and needing 35 seconds to reset for another firing.
      </Description>
      <Icon>Textures\Icons\laser icon.png</Icon>
      <CubeSize>Large</CubeSize>
@@ -417,7 +417,7 @@
 			[Range: 3.5km]
 			[Velocity: 600m/s]
 			[Damage: Energy]
-			[Homing and 3m Push Field]
+			[Homing and AOE]
 			</Description>
 			<Icon>Textures\GUI\Icons\Ceis.dds</Icon>
 			<CubeSize>Large</CubeSize>
