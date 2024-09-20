@@ -123,7 +123,7 @@ namespace Scripts {
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
                     ReloadTime = 600, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
-                    DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayUntilFire = 120, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, // Heat generated per shot.
                     MaxHeat = 100, // Max heat before weapon enters cooldown (70% of max heat).
                     Cooldown = .10f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
@@ -135,7 +135,7 @@ namespace Scripts {
                     GiveUpAfter = false, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
                     BarrelSpinRate = 0, // Visual only, 0 disables and uses RateOfFire.
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
-                    SpinFree = false, // Spin barrel while not firing.
+                    SpinFree = true, // Spin barrel while not firing.
                     StayCharged = true, // Will start recharging whenever power cap is not full.
                 },
                 Audio = new HardPointAudioDef

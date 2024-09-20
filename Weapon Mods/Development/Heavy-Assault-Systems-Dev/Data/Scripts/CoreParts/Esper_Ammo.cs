@@ -303,11 +303,11 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "", //ShipWelderArc
+                        Name = "Esper_fire_01", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 1,
+                            Scale = 5,
                         },
                     },
                     Hit = new ParticleDef
@@ -339,7 +339,7 @@ namespace Scripts
                     WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Length = 10f, //
                         Width = 1f, //
                         Color = Color(red: 1, green: 3, blue: 1f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
@@ -368,7 +368,7 @@ namespace Scripts
                     },
                     Trail = new TrailDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Textures = new[] {
                             "WeaponLaser", // Please always have this Line set, if this Section is enabled.
                         },
@@ -686,11 +686,12 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "", //ShipWelderArc
+                        Name = "Dragons'_breath_pellet_07", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 1,
+                            Scale = 5,
+                            
                         },
                     },
                     Hit = new ParticleDef
@@ -711,7 +712,7 @@ namespace Scripts
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 1,
+                            Scale = 10,
                             HitPlayChance = 1f,
                         },
                     },
@@ -722,10 +723,10 @@ namespace Scripts
                     WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
-                        Enable = true,
-                        Length = 5f, //
-                        Width = 1f, //
-                        Color = Color(red: 1, green: 3, blue: 1f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
+                        Enable = false,
+                        Length = 0f, //
+                        Width = 0f, //
+                        Color = Color(red: 0, green: 0, blue: 0f, alpha: 0), // RBG 255 is Neon Glowing, 100 is Quite Bright.
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
@@ -751,7 +752,7 @@ namespace Scripts
                     },
                     Trail = new TrailDef
                     {
-                        Enable = true,
+                        Enable = false,
                         Textures = new[] {
                             "WeaponLaser", // Please always have this Line set, if this Section is enabled.
                         },
